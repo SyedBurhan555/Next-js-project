@@ -1,22 +1,22 @@
-.main{
-    width: 100%;
-    box-shadow: inset 0 1px 1px 0
-     hsla(0,0%,100%,.1), 0 50px 100px -20px
-     rgba(50,50,93,.25), 0 30px 60px -30px rgba(0,0,0,.3);
+.main {
+  width: 100%;
+  box-shadow: inset 0 1px 1px 0 hsla(0, 0%, 100%, 0.1),
+    0 50px 100px -20px rgba(50, 50, 93, 0.25),
+    0 30px 60px -30px rgba(0, 0, 0, 0.3);
 }
-.nav_row{
-     padding: 33px 100px;
-     display: flex;
-     justify-content: space-between;
-     align-items: center;
-    }
-.logo_image{
-    width: 140px;
-    height: auto;
+.nav_row {
+  padding: 33px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.nav_name{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    gap: 3.2rem;
+.logo_image {
+  width: 140px;
+  height: auto;
+}
+.nav_name {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 3.2rem;
 }
