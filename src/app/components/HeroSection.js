@@ -1,5 +1,6 @@
 import React from "react";
 import heroSection from "../styles/heroSection.module.css";
+import Link from "next/link";
 
 const HeroSection = () => {
   return (
@@ -15,7 +16,9 @@ const HeroSection = () => {
             you covered. Browse our selection of the latest and greatest movies,
             and find your new favorite today.
           </p>
-          <button className={heroSection.btn}>Explore Movies</button>
+          <Link href="/Pages/movie">
+            <button className={heroSection.btn}>Explore Movies</button>
+          </Link>
         </div>
         <div className={heroSection.leftCol}>
           <img
