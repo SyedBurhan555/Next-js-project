@@ -2,14 +2,14 @@ import React from "react";
 import heroSection from "../styles/heroSection.module.css";
 import Link from "next/link";
 
-const HeroSection = () => {
+const HeroSection = ({ mainheading, image }) => {
   return (
     <div className={heroSection.heroSection}>
       <div className={heroSection.row}>
         <div className={heroSection.rightCol}>
           <h1>
-            LET'S WATCH MOVIE
-            <br /> TOGETHER
+            {mainheading}
+            <br />
           </h1>
           <p className={heroSection.para}>
             From award-winning dramas to blockbuster action movies, we've got
@@ -28,7 +28,7 @@ const HeroSection = () => {
             height="600"
             decoding="async"
             data-nimg="1"
-            src={"/home.svg"}
+            src={image}
           />
         </div>
       </div>
