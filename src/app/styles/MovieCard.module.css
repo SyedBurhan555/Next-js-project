@@ -1,0 +1,24 @@
+.MovieCard{
+    width: 30%;
+    margin-top: 12px;
+}
+.MovieCard img{
+    width: 100%;
+}
+.MovieCard h2{
+    margin-top: 12px;
+}
+.MovieCard p{
+    margin-top: 7px;
+    font-size: 16px;
+    font-weight: 500;
+}
+.MovieCard button{
+    padding: 13px 21px;
+    border:none;
+    margin: 12px 0px;
+    background-color: black;
+    color: white;
+    border-radius: 18px;
+    cursor: pointer;
+}
