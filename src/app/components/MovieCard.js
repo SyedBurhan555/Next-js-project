@@ -6,7 +6,11 @@ const MovieCard = (curElem) => {
   return (
     <>
       <div className={styles.MovieCard}>
-        <img src={curElem.jawSummary.backgroundImage.url} alt={title} />
+        <img
+          src={curElem.jawSummary.backgroundImage.url}
+          alt={title}
+          loading="lazy"
+        />
         <h2>{title}</h2>
         <p>{`${synopsis.substring(0, 66)} ...`}</p>
         {/* <p>{synopsis}</p> */}
