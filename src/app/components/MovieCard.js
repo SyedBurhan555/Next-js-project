@@ -8,9 +8,10 @@ const MovieCard = (curElem) => {
       <div className={styles.MovieCard}>
         <img src={curElem.jawSummary.backgroundImage.url} alt={title} />
         <h2>{title}</h2>
-        {/* <p>{`${synopsis.substring(0, 66)} ...`}</p> */}
-        <p>{synopsis}</p>
-        <Link href="">
+        <p>{`${synopsis.substring(0, 66)} ...`}</p>
+        {/* <p>{synopsis}</p> */}
+        <Link href={`movie/${id}`}>
+          {/* <Link href=""> */}
           <button>Read More</button>
         </Link>
       </div>

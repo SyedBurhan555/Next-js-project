@@ -1,5 +1,13 @@
 import React from "react";
 import styles from "../styles/footer.module.css";
+import {
+  FaFacebookF,
+  FaTwitter,
+  FaInstagram,
+  FaLinkedinIn,
+  FaYoutube,
+} from "react-icons/fa";
+import Link from "next/link";
 import Links from "./Links";
 
 const Footer = () => {
@@ -7,7 +15,17 @@ const Footer = () => {
     <div className={styles.footer}>
       <div className={styles.footerRow}>
         <h1>Main Heading</h1>
-        <div className={styles.socialcons}></div>
+        <div className={styles.socialIcons}>
+          <FaFacebookF className={styles.socialLinks} />
+
+          <FaTwitter className={styles.socialLinks} />
+
+          <FaInstagram className={styles.socialLinks} />
+
+          <FaLinkedinIn className={styles.socialLinks} />
+
+          <FaYoutube className={styles.socialLinks} />
+        </div>
       </div>
       <div className={styles.footerLinksRow}>
         <div className={styles.footerCol1}>

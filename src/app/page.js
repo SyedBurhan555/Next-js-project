@@ -1,9 +1,13 @@
 import React from "react";
-import HeroSection from "./components/HeroSection";
+import dynamic from "next/dynamic";
+
+const WithCustomLoading = dynamic(() => import("./components/HeroSection"), {
+  loading: () => <p>Loading...</p>,
+});
 
 const Page = () => {
   return (
-    <HeroSection
+    <WithCustomLoading
       mainheading={"LET'S WATCH MOVIE\nTOGETHER"}
       image={"/home.svg"}
     />
