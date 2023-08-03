@@ -1,8 +1,8 @@
 .footer{
-    background-color: black;
-    width:100%;
-    height: 300px;
-    /* margin-top: auto; */
+    background-color: #161617;
+    max-width: 140rem;
+    margin: auto;
+    padding: 30px 40px 40px;
 }
 .footer p {
     color:white;
@@ -10,17 +10,18 @@
 .footerRow{
     display: flex;
     justify-content: space-between;
-    width: 80%;
-    padding-top: 22px;
-    margin: auto;
+    width: 90%;
+    padding-top: 15px;
+    align-items: center;
+    margin: 0 auto 40px auto; 
 }
 .footerRow h1{
     color: white;
 }
 .footerLinksRow{
     display: flex;
-    width: 80%;
-    margin: auto;
+    width: 90%;
+    margin: 12px auto;
     justify-content: space-between;
 
 }
@@ -49,8 +50,22 @@
     padding: 0px 12px;
     width: calc(100% + 80px);
     margin-top: 12px;
-    background: transparent;
-    color: white;
+    background: white;
+    color: black;
     cursor: pointer;
     font-size: 14px;
+}
+.socialIcons{
+    /* background-color: red; */
+    width: 20%;
+    display: flex;
+    justify-content: space-between;   
+}
+.socialLinks {
+    width:25px;
+    height: 20px;
+    background-color: white;
+    border-radius: 32px;
+    padding: 7px;
+    cursor: pointer;
 }

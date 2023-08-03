@@ -7,16 +7,16 @@ const Links = ({ heading, link1, link2, link3, link4 }) => {
     <div className={styles.links}>
       <div className={styles.row}>
         <h2 className={styles.linksHeading}>{heading}</h2>
-        <li>
+        <li className={styles.linksName}>
           <Link href="">{link1}</Link>
         </li>
-        <li>
+        <li className={styles.linksName}>
           <Link href="">{link2}</Link>
         </li>
-        <li>
+        <li className={styles.linksName}>
           <Link href="">{link3}</Link>
         </li>
-        <li>
+        <li className={styles.linksName}>
           <Link href="">{link4}</Link>
         </li>
       </div>

@@ -1,8 +1,14 @@
 import MovieCard from "@/app/components/MovieCard";
 import React from "react";
 import style from "../../styles/Movie.module.css";
+import dynamic from "next/dynamic";
+
+const LazyLoadingMovieCard = dynamic(() =>
+  import("@/app/components/MovieCard")
+);
 
 const Movie = async () => {
+  await new Promise((resolve) => setTimeout(resolve, 2000));
   const url =
     "https://netflix54.p.rapidapi.com/search/?query=stranger&offset=0&limit_titles=50&limit_suggestions=20&lang=en";
   const options = {
@@ -15,14 +21,14 @@ const Movie = async () => {
   const res = await fetch(url, options);
   const data = await res.json();
   const main_data = data.titles;
-  // console.log(main_data.jawSummary);
+  // console.log(main_data);
 
   return (
     <div>
       <h1 style={{ textAlign: "center", margin: 17 }}>Series & Movie</h1>
       <div className={style.Movie}>
         {main_data.map((curElem) => {
-          return <MovieCard key={curElem.id} {...curElem} />;
+          return <LazyLoadingMovieCard key={curElem.id} {...curElem} />;
         })}
       </div>
     </div>

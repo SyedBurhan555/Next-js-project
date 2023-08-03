@@ -1,6 +1,7 @@
 .MovieCard{
     width: 30%;
     margin-top: 12px;
+    cursor: pointer;
 }
 .MovieCard img{
     width: 100%;
@@ -21,4 +22,9 @@
     color: white;
     border-radius: 18px;
     cursor: pointer;
+}
+@media(max-width: 768px){
+    .MovieCard{
+        width: 100%;
+    }
 }
