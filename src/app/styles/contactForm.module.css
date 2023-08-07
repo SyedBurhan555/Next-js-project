@@ -1,0 +1,38 @@
+.contactForm{
+    width: 22%;
+    margin: 16px auto 16px auto;
+    padding: 26px;
+    box-shadow: rgba(0, 0, 0, 0.02) 
+    0px 1px 3px 0px,
+     rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+.contactForm label{
+    display: block;
+    margin: 14px 0;
+    color: gray;
+    text-transform: capitalize;
+}
+.contactForm input ,.contactForm textarea{
+    display: block;
+    border: none;
+    width: 100%;
+    outline: none;
+    color: gray;
+    font-size: 16px;
+    margin-top: .5rem;
+    padding: .6rem 0;
+    border-radius: .3rem;
+    box-shadow: rgba(0, 0, 0, 0.02) 
+    0px 1px 3px 0px,
+     rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+.contactForm button{
+    padding: 12px 30px;
+    margin-top: 14px;
+    border: none;
+    font-weight: 700;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    border-radius: 20px;
+}

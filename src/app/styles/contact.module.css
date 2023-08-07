@@ -1,0 +1,36 @@
+.Contact{
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
+.contactHeading{
+    text-align: center;
+    font-weight: 900;
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+.ContactIcons{
+    color: red;
+    font-size: xx-large;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+.ContactData{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+.heading2{
+    text-align: center;
+    margin: 25px 0px;
+    font-weight: 800;
+}
+.contactForm iframe{
+    width: 100%;
+    border: none;
+    height:500px
+}
