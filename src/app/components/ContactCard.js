@@ -2,6 +2,7 @@ import React from "react";
 import styles from "../styles/contactCard.module.css";
 
 const ContactCard = ({ icon, heading, days, time, button }) => {
+  // console.log("heelo next js");
   return (
     <div className={styles.ContactCard}>
       <i>{icon}</i>
