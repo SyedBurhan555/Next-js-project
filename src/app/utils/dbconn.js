@@ -1,7 +1,6 @@
 import mongoose from "mongoose";
 
-const MONGODB_URL = process.env.MONGO_DB;
-
+const MONGODB_URL = "mongodb://127.0.0.1:27017/user_Data";
 if (!MONGODB_URL) {
   throw new Error(
     "Please define the MONGODB_URI environment variable inside .env.local"
@@ -14,7 +13,7 @@ if (!cached) {
   cached = global.mongoose = { con: null, promise: null };
 }
 
-const dbConnect = async () => {
+const Connect = async () => {
   if (cached.conn) {
     return cached.conn;
   }
@@ -40,4 +39,18 @@ const dbConnect = async () => {
   return cached.conn;
 };
 
-export default dbConnect;
+export default Connect;
+
+// import mongoose from "mongoose";
+// const Connect = async () => {
+//   try {
+//     await mongoose.connect("mongodb://127.0.0.1:27017/user_Data");
+//   } catch (error) {
+//     throw new Error("Connection failed!");
+//   }
+// };
+
+// export default Connect;
+
+// const url =
+//   "mongodb+srv://syedburhanali555:burhan1234@@cluster0.tijzzme.mongodb.net/user_Data?retryWrites=true&w=majority";

@@ -1,34 +1,30 @@
 import mongoose from "mongoose";
 
-const contactSchema = mongoose.Schema(
+const contactSchema = new mongoose.Schema(
   {
     name: {
       type: String,
-      required: [true, "Please enter your name"],
+      required: true,
     },
     email: {
       type: String,
       required: true,
-      unique: true,
     },
-    phone: {
+    phone_number: {
       type: Number,
-      required: true,
-      unique: true,
     },
     message: {
       type: String,
-      maxlength: [1024, "Message should be less than 5kb"],
-      minlength: [2],
-      trim: true,
-      required: false,
+      required: true,
       default: "No Message",
     },
   },
   {
-    timestamp: true,
+    timestamps: true,
   }
 );
 
 const Contact =
-  mongoose.models.Contact || mongoose.model("Contacts_Data", contactSchema);
+  mongoose.models.Contact || mongoose.model("Contact", contactSchema);
+
+export default Contact;

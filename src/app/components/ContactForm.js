@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import styles from "../styles/contactForm.module.css";
 
 const ContactForm = () => {
@@ -9,20 +9,47 @@ const ContactForm = () => {
     phone_number: "",
     message: "",
   });
+  const [status, setStatus] = useState(null);
+
   const onChangeHandler = (e) => {
     const name = e.target.name;
     const value = e.target.value;
-    // console.log(user);5
     setUser((pre) => ({ ...pre, [name]: value }));
   };
-  useEffect(() => {
-    console.log("user-data", user);
-  }, []);
 
-  const onSubmit = () => {};
+  const onSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: user.name,
+          email: user.email,
+          phone_number: user.phone_number,
+          message: user.message,
+        }),
+      });
+      if (response.status === 201) {
+        setUser({
+          name: "",
+          email: "",
+          phone_number: "",
+          message: "",
+        });
+        setStatus("success");
+      } else {
+        setStatus("error");
+        alert("Something went wrong");
+      }
+      // return response.json();
+    } catch (error) {
+      console.log(error);
+    }
+  };
   return (
     <div className={styles.contactForm}>
-      <form>
+      <form onSubmit={onSubmit}>
         <label>Enter Your Name</label>
         <input
           required
@@ -56,6 +83,10 @@ const ContactForm = () => {
           value={user.message}
           onChange={onChangeHandler}
         ></textarea>
+        {status === "success" && <p>Thank You for your message</p>}
+        {status === "error" && (
+          <p>There was an error submitting your message</p>
+        )}
         <button type="submit">Send</button>
       </form>
     </div>
