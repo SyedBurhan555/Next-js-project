@@ -36,3 +36,11 @@
     cursor: pointer;
     border-radius: 20px;
 }
+.success,.error{
+    color: green;
+    margin-top: 10px;
+    font-weight: 700;
+}
+.error{
+    color: red;
+}

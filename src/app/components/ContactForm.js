@@ -83,11 +83,17 @@ const ContactForm = () => {
           value={user.message}
           onChange={onChangeHandler}
         ></textarea>
-        {status === "success" && <p>Thank You for your message</p>}
-        {status === "error" && (
-          <p>There was an error submitting your message</p>
+        {status === "success" && (
+          <p className={styles.success}>Thank You for your message</p>
         )}
-        <button type="submit">Send</button>
+        {status === "error" && (
+          <p className={styles.error}>
+            There was an error submitting your message
+          </p>
+        )}
+        <button type="submit" disabled>
+          Send
+        </button>
       </form>
     </div>
   );
