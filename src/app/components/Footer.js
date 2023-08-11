@@ -66,13 +66,16 @@ const Footer = () => {
         </div>
         <div className={styles.footerCol5}>
           <h2>Subscribe</h2>
-          <input
-            placeholder="Enter Your Email"
-            className={styles.footerInputs}
-          />
-          <button type="submit" className={styles.footerBtn}>
-            Subscribe
-          </button>
+          <form>
+            <input
+              required
+              placeholder="Enter Your Email"
+              className={styles.footerInputs}
+            />
+            <button type="submit" className={styles.footerBtn}>
+              Subscribe
+            </button>
+          </form>
         </div>
       </div>
     </div>

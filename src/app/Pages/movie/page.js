@@ -24,7 +24,7 @@ const Movie = async () => {
   // console.log(main_data);
 
   return (
-    <div>
+    <div className={style.mainMovie}>
       <h1 style={{ textAlign: "center", margin: 17 }}>Series & Movie</h1>
       <div className={style.Movie}>
         {main_data.map((curElem) => {

@@ -91,9 +91,7 @@ const ContactForm = () => {
             There was an error submitting your message
           </p>
         )}
-        <button type="submit" disabled>
-          Send
-        </button>
+        <button type="submit">Send</button>
       </form>
     </div>
   );

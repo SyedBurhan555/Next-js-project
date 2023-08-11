@@ -24,11 +24,10 @@ const HeroSection = ({ mainheading, image }) => {
           <img
             alt="watching netflix"
             loading="lazy"
-            width="600"
-            height="600"
             decoding="async"
             data-nimg="1"
             src={image}
+            className={heroSection.leftColImg}
           />
         </div>
       </div>
